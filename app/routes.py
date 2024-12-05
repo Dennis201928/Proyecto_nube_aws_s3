@@ -6,12 +6,12 @@ from app.models import Etiqueta, Meme
 from app.imagga import get_image_tags  # Importamos la función para obtener las etiquetas de Imagga
 
 # Configuración del cliente S3
-S3_BUCKET = "meme-storagee"  # Cambia por el nombre de tu bucket
-S3_REGION = "us-east-2"
+S3_BUCKET = ""  # Cambia por el nombre de tu bucket
+S3_REGION = ""
 s3_client = boto3.client('s3', region_name=S3_REGION)
 
 # Carpeta para subir archivos temporalmente
-UPLOAD_FOLDER = 'uploads'
+UPLOAD_FOLDER = ''
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route('/')
