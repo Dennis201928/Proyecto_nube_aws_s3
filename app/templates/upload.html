@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Meme</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        input,
+        button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Subir Meme</h1>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file">Selecciona un archivo:</label>
+        <input type="file" name="file" id="file" required>
+
+        <label for="descripcion">Descripción:</label>
+        <input type="text" name="descripcion" id="descripcion" placeholder="Describe el meme" required>
+
+        <label for="usuario">Usuario:</label>
+        <input type="text" name="usuario" id="usuario" placeholder="Tu nombre de usuario" required>
+
+        <label for="etiquetas">Etiquetas (separadas por comas):</label>
+        <input type="text" name="etiquetas" id="etiquetas" placeholder="Ejemplo: gracioso,humor,meme" required>
+
+        <button type="submit">Subir Meme</button>
+    </form>
+</body>
+
+</html>
